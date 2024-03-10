@@ -1,0 +1,233 @@
+*{
+    -fx-mainColor: #201f41;
+    -fx-secondColor:#0C0C28;
+    -fx-thirdColor:#5C59FD;
+    -fx-fourthColor:#D5E0FF;
+    -fx-textColor:#E9E9F9;
+
+    -fx-labelColor:#5F5DC7;
+}
+.root{
+
+    --block-font-family: 'roboto';
+    -fx-font-weight: bold;
+    -fx-background-color: -fx-mainColor;
+}
+
+/*    \\\\\\\\\\\\\\\\\\\\\\\\        top bar  with close and minimise buttons           /////////////////////// */
+.top-bar {
+    -fx-background-color: transparent;
+    -fx-background-radius: 20px 20px 0 0;
+}
+.top-bar .top-bar-buttons{
+    -fx-background-color: transparent;
+    -fx-max-width: 33px;
+
+
+}
+.top-bar .top-bar-buttons:hover{
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+/*   \\\\\\\\\\\\\\\\\\\\\\   customizing the  side-bar    ////////////////////////////////////   */
+
+#sideBar{
+    -fx-background-radius: 20px 10px 10px 20px ;
+    -fx-background-color: -fx-secondColor;
+}
+#sideBar #sideBar_vbox .button ,#signout_Btn{
+    -fx-background-radius: 14px ;
+    -fx-background-color: transparent;
+    -fx-text-fill:-fx-textColor ;
+    -fx-font-size: 20px;
+    -fx-alignment: BASELINE_LEFT;
+    -fx-graphic-text-gap: 18;
+    -fx-padding: 0 0 0 15px ;
+    -fx-cursor: hand;
+}
+#sideBar #sideBar_vbox .button:hover, #signout_Btn:hover{
+
+    -fx-background-color: -fx-mainColor;
+
+}
+#sideBar #sideBar_vbox .button:focused ,.button:hover {
+    -fx-background-color: -fx-thirdColor;
+}
+#sideBar #sideBar_vbox .button:pressed {
+
+    -fx-background-color:linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #9b00f4 0.0%, #9b00f4 0.6729%, #e80592 43.6484%, #d74045 72.2746%, #e74e55 100.0%)
+}
+.mfx-button .mfx-ripple-generator{
+    -fx-background-radius: 14px ;
+}
+#signout_Btn:focused{
+    -fx-background-color: #d02e24;
+}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\          main anchor pane            /////////////////////////////////////////////////////*/
+#main_pan{
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+
+}
+
+#content_pane, #products_pane, #users_pane, #dashboard_pane,#home_pane, #addProduct_pane, #modifierProduct_pane,
+#addUser_pane, #modifierUser_pane,#allProducts_Pane,
+#addCategory_pane{
+    -fx-background-radius: 0 0 20px 0;
+    -fx-background-color: -fx-mainColor;
+}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  scroll pane in the first page /////////////////////////////*/
+
+.mfx-scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: #2f6cd7;  /* Replace with your color */
+}
+.mfx-scroll-pane .scroll-bar:vertical .track {
+    -fx-background-color:#E7DFC6;  /* Replace with your color */
+}
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\   table-view     ///////////////////////////////*/
+
+.mfx-table-view {
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-border-width:0px;
+}
+.mfx-table-view .columns-container  {
+    -fx-border-width: 0;
+    -fx-background-radius: 10 10 0 0;
+    -fx-background-color: linear-gradient(to bottom right, #2f466b, #662d60);
+}
+.mfx-table-column {
+    -fx-border-width: 0;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16;
+    -fx-font-family: roboto;
+}
+.mfx-table-column:hover {
+    -fx-border-color: transparent gray  transparent transparent;
+    -fx-border-width:  1px ;
+}
+.mfx-table-row:hover {
+    -fx-background-color: #D5E0FF;
+}
+.mfx-table-row:selected{
+    -fx-background-color: #94b0fa;
+}
+.mfx-table-row .mfx-ripple-generator {
+    -mfx-ripple-radius: 20;
+    -mfx-ripple-color: #ec9773;
+}
+.mfx-table-row-cell {
+    -fx-font-family: roboto;
+    -fx-font-size: 13px;
+}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  text field  ///////////////////////////////////////*/
+.titles{
+    /*-fx-text-fill: -fx-labelColor;*/
+    -fx-font-size: 31px;
+    -fx-text-fill: -fx-textColor;
+
+}
+
+
+.mfx-text-field,.mfx-date-picker  {
+    -fx-font-size:16px ;
+    -fx-font-weight: bold;
+    -fx-font-family:"Roboto";
+
+    -fx-border-width: 0 0 3px 0;
+    -px-padding:0 0 -8px 3px;
+    -fx-border-radius: 0;
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+
+
+
+}
+.mfx-text-field .floating-text ,.mfx-date-picker .floating-text{
+    -fx-background-color: transparent;
+
+    -fx-text-fill: #a9a9a9;
+
+}
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  buttons  ///////////////////////////////////*/
+
+.mfx-button{
+    -fx-padding: 10px 13px 10px 13px;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-cursor: hand;
+    -fx-background-radius: 10px;
+}
+.annuler_buttons{
+    -fx-background-color: #742979;
+}
+.annuler_buttons:hover{
+    -fx-background-color: #953a9b;
+    /*-fx-rotate: -1;*/
+}
+.valider_buttons{
+
+    -fx-background-color: #336fc4;
+}
+.valider_buttons:hover{
+    /*-fx-rotate:1 ;*/
+    -fx-background-color: #428aee;
+}
+.valider_buttons:pressed ,.annuler_buttons:pressed{
+    -fx-background-color:linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #3cac3e 0.0%, #6fb14b 0.6729%, #0cc296 38.8084%, #1185c4 71.6016%, #4a51d1 100.0%)
+}
+.add_buttons{
+    /*-fx-background-color: #428aee;*/
+    -fx-background-color: #c97f2a;
+}
+.add_buttons:hover{
+    /*-fx-background-color:#6396D8 ;*/
+    -fx-background-color: #ec9a41;
+    /*-fx-rotate: -1;*/
+}
+.add_buttons:pressed{
+    -fx-background-color:linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #3cac3e 0.0%, #6fb14b 0.6729%, #0cc296 38.8084%, #1185c4 71.6016%, #4a51d1 100.0%)
+}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ scroll pane in categories pane /////////////////////////////////*/
+#scroll_pane_categories{
+    -fx-background-color: transparent;
+}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\    refresh button ////////////////////////////////////*/
+.refresh_button{
+    -fx-padding: 10px 13px 10px 13px;
+    -fx-background-color: #5A3693;
+    -fx-font-size: 17px;
+    -fx-cursor: hand;
+    -fx-background-radius: 10px;
+}
+.refresh_button:hover{
+    -fx-background-color: #855bc9;
+}
+.refresh_button:pressed{
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #6200f4 0.0%, #dd00ff 0.6729%, #ff0090 43.6484%, #ff0009 72.2746%, #e74e55 100.0%);
+}
+#home_pane #DBCategories_container Button {
+    -fx-background-color: linear-gradient(#5EC5D4, #9B5FC0);
+    -fx-background-radius: 6px;
+    -fx-text-fill: white; /* Couleur du texte pour contraster avec le fond */
+    -fx-font-family: "roboto";
+    -fx-font-size: 14px;
+}
+
+#home_pane #DBCategories_container Button:pressed {
+    -fx-background-color: linear-gradient(#9B5FC0, #5EC5D4);
+}
+#lbl{
+    -fx-font-family: "roboto";
+    -fx-text-fill: white;
+}
+
+#home_pane #DBCategories_container Button:hover {
+    -fx-background-color: linear-gradient(#3A92A3, #834A9E);
+}
+
+
